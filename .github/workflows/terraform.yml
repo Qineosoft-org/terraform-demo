@@ -48,6 +48,6 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
 
-      - name: Terraform Apply
+      - name: Terraform destroy
         if: github.event_name == 'push'
-        run: terraform apply -auto-approve
+        run: terraform destroy -auto-approve
